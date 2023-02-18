@@ -1,0 +1,113 @@
+{
+  "maincategory": [
+    {
+      "name": "Male",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Female"
+    },
+    {
+      "id": 3,
+      "name": "Kids"
+    }
+  ],
+  "subcategory": [
+    {
+      "name": "Jeans",
+      "id": 1
+    },
+    {
+      "name": "Tshirt",
+      "id": 2
+    },
+    {
+      "name": "Shirt",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Trouer"
+    }
+  ],
+  "brand": [
+    {
+      "name": "Adidas",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Mufti"
+    },
+    {
+      "id": 3,
+      "name": "Polo"
+    },
+    {
+      "name": "Zara",
+      "id": 4
+    },
+    {
+      "name": "Gucci",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Tommy Hilfiger"
+    }
+  ],
+  "product": [
+    {
+      "id": 0
+    },
+    {
+      "name": "Male Jeans Slim Fit Mufti",
+      "maincategory": "",
+      "subcategory": "",
+      "brand": "Mufti",
+      "color": "Black",
+      "size": "36",
+      "baseprice": "4560",
+      "discount": "45",
+      "finalprice": 0,
+      "stock": "In Stock",
+      "description": "",
+      "pic1": "p5.jpg",
+      "pic2": "p2.jpg",
+      "pic3": "p1.jpg",
+      "pic4": "p7.jpg",
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "id": 0
+    }
+  ],
+  "cart": [
+    {
+      "id": 0
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 0
+    }
+  ],
+  "checkout": [
+    {
+      "id": 0
+    }
+  ],
+  "contact": [
+    {
+      "id": 0
+    }
+  ],
+  "newslatter": [
+    {
+      "id": 0
+    }
+  ]
+}
