@@ -7,6 +7,10 @@
     {
       "id": 2,
       "name": "Female"
+    },
+    {
+      "name": "Kids",
+      "id": 3
     }
   ],
   "subcategory": [
@@ -25,16 +29,16 @@
     {
       "id": 4,
       "name": "Trouer"
+    },
+    {
+      "name": "Men Cloths",
+      "id": 5
     }
   ],
   "brand": [
     {
       "name": "Adidas",
       "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Mufti"
     },
     {
       "id": 3,
@@ -45,35 +49,44 @@
       "id": 4
     },
     {
-      "name": "Gucci",
-      "id": 5
-    },
-    {
       "id": 6,
       "name": "Tommy Hilfiger"
+    },
+    {
+      "name": "Nike",
+      "id": 7
+    },
+    {
+      "name": "nike",
+      "id": 8
+    },
+    {
+      "name": "Boss",
+      "id": 9
+    },
+    {
+      "name": "U.S Polo",
+      "id": 10
     }
   ],
   "product": [
     {
-      "id": 0
-    },
-    {
-      "name": "Male Jeans Slim Fit Mufti",
-      "maincategory": "",
-      "subcategory": "",
-      "brand": "Mufti",
+      "name": "Nike Man T-Shirt",
+      "maincategory": "Male",
+      "subcategory": "Tshirt",
+      "brand": "Nike",
       "color": "Black",
-      "size": "36",
-      "baseprice": "4560",
-      "discount": "45",
-      "finalprice": 0,
+      "size": "30",
+      "baseprice": 1580,
+      "discount": 8,
+      "finalprice": 1453,
       "stock": "In Stock",
-      "description": "",
-      "pic1": "p5.jpg",
-      "pic2": "p2.jpg",
-      "pic3": "p1.jpg",
-      "pic4": "p7.jpg",
-      "id": 1
+      "description": "This is Sample Product",
+      "pic1": "p26.jpg",
+      "pic2": "p22.jpg",
+      "pic3": "p27.jpg",
+      "pic4": "p11.jpg",
+      "id": 2
     }
   ],
   "user": [

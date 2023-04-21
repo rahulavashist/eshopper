@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LeftNav from './LeftNav'
 
-import { addProduct, getProduct } from "../../Store/ActionCreators/ProductActionCreators"
+import { addProduct } from "../../Store/ActionCreators/ProductActionCreators"
 import { getMaincategory } from "../../Store/ActionCreators/MaincategoryActionCreators"
 import { getSubcategory } from "../../Store/ActionCreators/SubcategoryActionCreators"
 import { getBrand } from "../../Store/ActionCreators/BrandActionCreators"
@@ -25,11 +25,9 @@ export default function AdminAddProduct() {
         pic3: "",
         pic4: ""
     })
-    var product = useSelector((state) => state.ProductStateData)
     var maincategory = useSelector((state) => state.MaincategoryStateData)
     var subcategory = useSelector((state) => state.SubcategoryStateData)
     var brand = useSelector((state) => state.BrandStateData)
-
     var navigate = useNavigate()
     var dispatch = useDispatch()
     function getData(e) {
@@ -40,30 +38,44 @@ export default function AdminAddProduct() {
                 ...old,
                 [name]: value
             }
-        })
+        })  
     }
     function getFile(e) {
         var name = e.target.name
         var value = e.target.files[0].name
         setdata((old) => {
             return {
-                ...old,
+                ...old, 
                 [name]: value
             }
         })
     }
     function postData(e) {
         e.preventDefault()
+        var bp = Number(data.baseprice)
+        var d = Number(data.discount)
+        var fp = parseInt(bp-bp*d/100)
+        var mc = data.maincategory
+        var sc = data.subcategory
+        var br  = data.brand
+       
+        if(mc==="")
+        mc = maincategory[0].name
+        if(sc==="")
+        mc = subcategory[0].name
+        if(br==="")
+        mc = brand[0].name
+        
         var item = {
             name:data.name,
-            maincategory:data.maincategory,
-            subcategory:data.subcategory,
-            brand:data.brand,
+            maincategory:mc,
+            subcategory:sc,
+            brand:br,
             color:data.color,
             size:data.size,
-            baseprice:data.baseprice,
-            discount:data.discount,
-            finalprice:data.finalprice,
+            baseprice:bp,
+            discount:d,
+            finalprice:fp,
             stock:data.stock,
             description:data.description,
             pic1:data.pic1,
@@ -75,10 +87,9 @@ export default function AdminAddProduct() {
         navigate("/admin-product")
     }
     useEffect(() => {
-        dispatch(getProduct())
         dispatch(getMaincategory())
         dispatch(getSubcategory())
-        dispatch(getBrand())
+        dispatch(getBrand()) 
     }, [])
     return (
         <>
@@ -104,7 +115,7 @@ export default function AdminAddProduct() {
                                             })
                                         }
                                     </select>
-                                </div>
+                                 </div>
                                 <div className="col-lg-3 col-md-6 col-12">
                                     <label htmlFor="subcategory">Subcategory</label>
                                     <select name="subcategory" id="subcategory" onChange={getData} className="form-control">
@@ -155,7 +166,7 @@ export default function AdminAddProduct() {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="description">Description</label>
-                                <textarea name="description" id="description" rows="4" onClick={getData} className="form-control"></textarea>
+                                <textarea name="description" id="description" value={data.description} rows="4" onClick={getData} className="form-control"></textarea>
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6 col-12">

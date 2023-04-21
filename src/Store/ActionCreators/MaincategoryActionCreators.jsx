@@ -12,7 +12,7 @@ export function getMaincategory(){
     }
 }
 export function updateMaincategory(data){
-    return{
+    return{  
         type:UPDATE_MAINCATEGORY,
         payload:data
     }

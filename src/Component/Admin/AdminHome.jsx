@@ -19,7 +19,7 @@ export default function AdminHome() {
                             <h5 className='bg-secondary text-light text-center'>Admin Home</h5>
                             <div className='d-flex'>
                                 <div className='border  p-3 w-50'>Name</div>
-                                <div className='border  p-3 w-50'>Nitin Chauhan</div>
+                                <div className='border  p-3 w-50'>Rahul Sharma</div>
                             </div>
                             <div className='d-flex'>
                                 <div className='border  p-3 w-50'>User Name</div>
@@ -31,7 +31,7 @@ export default function AdminHome() {
                             </div>
                             <div className='d-flex'>
                                 <div className='border  p-3 w-50'>Phone</div>
-                                <div className='border  p-3 w-50'>9873848046</div>
+                                <div className='border  p-3 w-50'>8307199529</div>
                             </div>
                             <div className='d-flex'>
                                 <div className='border  p-3 w-50'>Role</div>

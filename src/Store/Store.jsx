@@ -10,6 +10,6 @@ const Store = configureStore({
     reducer:RootReducer,
     middleware:()=>[sagaMiddleware]
 })
-export default Store
+export default Store 
 
 sagaMiddleware.run(RootSaga)

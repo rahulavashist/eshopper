@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { DataGrid } from '@mui/x-data-grid';
-import { useSelector, useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 
 import LeftNav from './LeftNav'
+
+import { useSelector, useDispatch } from 'react-redux';
 import { getProduct, deleteProduct } from "../../Store/ActionCreators/ProductActionCreators"
 
 export default function AdminProduct() {
@@ -13,7 +14,20 @@ export default function AdminProduct() {
     var navigate = useNavigate()
     var columns = [
         { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'name', headerName: 'Name', width: 130 },
+        { field: 'name', headerName: 'Name', width: 200 },
+        { field: 'maincategory', headerName: 'Maincategory', width: 100 },
+        { field: 'subcategory', headerName: 'Subcategory', width: 100 },
+        { field: 'brand', headerName: 'Brand', width: 100 },
+        { field: 'color', headerName: 'Color', width: 100 },
+        { field: 'size', headerName: 'Size', width: 50 },
+        { field: 'baseprice', headerName: 'Base Price', width: 100, renderCell: ({ row }) => <p>&#8377;{row.baseprice}</p>},
+        { field: 'discount', headerName: 'Discount', width: 100, renderCell: ({ row }) => <p>{row.discount}%</p>},
+        { field: 'finalprice', headerName: 'Final Price', width: 100, renderCell: ({ row }) => <p>&#8377;{row.finalprice}</p>},
+        { field: 'stock', headerName: 'Stock', width: 100 },
+        { field: 'pic1', headerName: 'Pic1', width: 70, renderCell: ({ row }) => <img src={`/assets/productImages/${row.pic1}`} height="50px" width="100%" className='rounded' alt=''/>},
+        { field: 'pic2', headerName: 'Pic2', width: 70, renderCell: ({ row }) => <img src={`/assets/productImages/${row.pic2}`} height="50px" width="100%" className='rounded' alt=''/>},
+        { field: 'pic3', headerName: 'Pic3', width: 70, renderCell: ({ row }) => <img src={`/assets/productImages/${row.pic3}`} height="50px" width="100%" className='rounded' alt=''/>},
+        { field: 'pic4', headerName: 'Pic4', width: 70, renderCell: ({ row }) => <img src={`/assets/productImages/${row.pic4}`} height="50px" width="100%" className='rounded' alt=''/>},
         {
             field: "edit",
             headerName: "Edit",
